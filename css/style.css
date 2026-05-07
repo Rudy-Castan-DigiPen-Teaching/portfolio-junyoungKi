@@ -14,17 +14,18 @@
   --fw-reg: 300;
   --fw-bold: 900;
 
-  --clr-light: #ffffff;
-  --clr-dark: #303030;
-  --clr-accent: #16e0bd;
+  /* 그래픽스 느낌을 살린 세련된 색상표 */
+  --clr-light: #f8fafc;
+  --clr-dark: #0f172a;      /* 더 깊은 네이비/블랙 배경 */
+  --clr-accent: #0ea5e9;    /* 세련된 스카이 블루/네온 블루 */
 
   --fs-h1: 3rem;
   --fs-h2: 2.25rem;
   --fs-h3: 1.25rem;
   --fs-body: 1rem;
 
-  --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
-    0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
+  --bs: 0.5em 0.5em 1em rgba(0, 0, 0, 0.4),
+    -0.1em -0.1em 0.5em rgba(14, 165, 233, 0.2); /* 네온 느낌의 그림자 추가 */
 }
 
 /* With wider screens use differnt/bigger numbers */
@@ -74,18 +75,21 @@ strong {
   display: inline-block;
   padding: 0.5em 2.5em;
   background: var(--clr-accent);
-  color: var(--clr-dark);
+  color: var(--clr-light); /* 버튼 글씨색 밝게 */
   text-decoration: none;
   cursor: pointer;
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: var(--fw-bold);
-  transition: transform 200ms ease-in-out;
+  border-radius: 4px; /* 버튼 모서리를 살짝 둥글게 */
+  box-shadow: 0 4px 10px rgba(14, 165, 233, 0.3); /* 빛나는 효과 */
+  transition: transform 200ms ease-in-out, box-shadow 200ms;
 }
 
 .btn:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(14, 165, 233, 0.6);
 }
 
 /* Typography */
@@ -274,6 +278,7 @@ header {
 
 .intro__img {
   box-shadow: var(--bs);
+  border-radius: 8px; /* 이미지를 부드럽게 */
 }
 
 .section__subtitle--intro {
@@ -367,6 +372,7 @@ header {
 
 .about-me__img {
   box-shadow: var(--bs);
+  border-radius: 8px;
 }
 
 @media (min-width: 600px) {
